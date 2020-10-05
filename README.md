@@ -53,7 +53,7 @@ This is as easy as running the following:
 
 ## Step 4: Deploy the Model into RedisAI
 
-NOTE: This requires tge redis-cli. If you don't have redis-cli, I've found the easiest way to get it is to download, build, and install Redis itself. Details can be found at the [Redis quickstart](https://redis.io/topics/quickstart) page:
+NOTE: This requires redis-cli. If you don't have redis-cli, I've found the easiest way to get it is to download, build, and install Redis itself. Details can be found at the [Redis quickstart](https://redis.io/topics/quickstart) page:
 
     $ redis-cli -x AI.MODELSET iris ONNX CPU BLOB < log_reg_iris.onnx
 
