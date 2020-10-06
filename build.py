@@ -22,5 +22,5 @@ initial_types = [
 onnx_model = convert_sklearn(model, initial_types=initial_types)
 
 # save the model
-with open("log_reg_iris.onnx", "wb") as f:
+with open("iris.onnx", "wb") as f:
   f.write(onnx_model.SerializeToString())

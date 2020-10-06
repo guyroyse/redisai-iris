@@ -55,7 +55,7 @@ This is as easy as running the following:
 
 NOTE: This requires redis-cli. If you don't have redis-cli, I've found the easiest way to get it is to download, build, and install Redis itself. Details can be found at the [Redis quickstart](https://redis.io/topics/quickstart) page:
 
-    $ redis-cli -x AI.MODELSET iris ONNX CPU BLOB < log_reg_iris.onnx
+    $ redis-cli -x AI.MODELSET iris ONNX CPU BLOB < iris.onnx
 
 ## Step 5: Make Some Predictions
 
@@ -65,11 +65,11 @@ Launch redis-cli:
 
 Set the input tensor with 2 sets of inputs of 4 values each:
 
-    > AI.TENSORSET iris_in FLOAT 2 4 VALUES 5.0 3.4 1.6 0.4 6.0 2.2 5.0 1.5
+    > AI.TENSORSET iris:in FLOAT 2 4 VALUES 5.0 3.4 1.6 0.4 6.0 2.2 5.0 1.5
 
 Make the predictions:
 
-    > AI.MODELRUN iris INPUTS iris_in OUTPUTS iris_out:predictions iris_out:scores
+    > AI.MODELRUN iris INPUTS iris:in OUTPUTS iris:inferences iris:scores
 
 Check the predictions:
 
